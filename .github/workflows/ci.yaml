@@ -1,0 +1,24 @@
+# Issue 2 version: build and test only. Later issues add manifest validation (issue 11),
+# image build and scan, and the GitOps tag bump back into this file.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - name: Compile and run unit tests
+        run: mvn -B -f services/pom.xml verify
