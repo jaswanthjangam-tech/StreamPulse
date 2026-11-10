@@ -21,4 +21,9 @@
     <java.version>21</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <modules>
+    <module>common</module>
+    <!-- order-api (issue 3), order-processor (issue 4) and analytics-api (issue 5) are added later -->
+  </modules>
 </project>
