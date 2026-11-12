@@ -24,6 +24,7 @@
 
   <modules>
     <module>common</module>
+    <module>order-api</module>
     <!-- order-api (issue 3), order-processor (issue 4) and analytics-api (issue 5) are added later -->
   </modules>
 </project>
